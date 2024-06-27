@@ -24,6 +24,8 @@ app.UseSwaggerUI();
 
 app.UseStaticFiles(); //for images etc in wwwwroot(serving static content), api's new job other than dealing with http requests
 
+app.UseCors("CorsPolicy");  // middleware for application services extensions cors service
+
 app.UseAuthorization();             //All middleware including http request pipeline
 
 app.MapControllers();
